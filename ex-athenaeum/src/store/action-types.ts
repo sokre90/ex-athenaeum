@@ -1,0 +1,10 @@
+export enum ActionType {
+	// Book
+	BOOKS_START = 'BOOKS_START',
+	BOOKS_SUCCESS = 'BOOKS_SUCCESS',
+	BOOKS_FAIL = 'BOOKS_FAIL',
+	ADD_BOOK = 'ADD_BOOK',
+	SET_BOOK = 'SET_BOOK',
+	// Page
+	SET_PAGE_TITLE = 'SET_PAGE_TITLE',
+}
