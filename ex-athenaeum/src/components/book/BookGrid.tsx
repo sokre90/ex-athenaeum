@@ -1,13 +1,8 @@
 import { Grid } from "@mui/material";
-import usePageTitle from "../../hooks/usePageTitle";
-import { useAppSelector } from "../../store/hooks";
 import { BookItem } from "./BookItem";
+import { Book } from "../../models/Book";
 
-const BookGrid = () => {
-    const books = useAppSelector(state => state.book.data);
-
-    usePageTitle('Books');
-
+const BookGrid = ({ books }: { books: Book[] }) => {
     return (
         <Grid container spacing={3}>
             {books.map((book) => (
@@ -17,7 +12,6 @@ const BookGrid = () => {
             ))}
         </Grid>
     );
-
 }
 
 export default BookGrid;

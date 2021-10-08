@@ -1,17 +1,14 @@
 import {
     Link as RouterLink,
 } from 'react-router-dom';
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import Toolbar from '@mui/material/Toolbar';
-import Box from '@mui/material/Box';
-import { Typography } from '@mui/material';
+import { Typography, Box, Toolbar, Button, Container } from '@mui/material';
 
 export const Header = () => {
     return (
         <header>
             <Box sx={{
-                boxShadow: 3
+                boxShadow: 3,
+                backgroundColor: 'background.paper'
             }}>
                 <Container fixed>
                     <Toolbar sx={{
@@ -23,12 +20,20 @@ export const Header = () => {
                         </Typography>
 
                         <nav>
-                            <Button component={RouterLink} to="/users">
+                            {/* <Button component={RouterLink} to="/users">
                                 Users
-                            </Button>
+                            </Button> */}
 
                             <Button component={RouterLink} to="/books">
                                 Books
+                            </Button>
+
+                            <Button component={RouterLink} to="/library">
+                                My library
+                            </Button>
+
+                            <Button component={RouterLink} to="/cart">
+                                My cart
                             </Button>
                         </nav>
                     </Toolbar>

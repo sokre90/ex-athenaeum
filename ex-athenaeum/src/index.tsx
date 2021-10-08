@@ -6,14 +6,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
+import DateAdapter from '@mui/lab/AdapterDateFns';
+import { LocalizationProvider } from '@mui/lab';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>
+    <LocalizationProvider dateAdapter={DateAdapter}>
+      <Provider store={store}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </Provider>
+    </LocalizationProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

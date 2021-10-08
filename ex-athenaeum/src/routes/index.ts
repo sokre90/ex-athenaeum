@@ -9,22 +9,21 @@ export interface AppRoute {
 
 export const routes: AppRoute[] = [
 	{
-		path: '/',
-		exact: true,
-		component: lazy(() => import('../components/home/Home')),
-	},
-	{
 		path: '/books',
 		exact: true,
-		component: lazy(() => import('../components/book/BookGrid')),
+		component: lazy(() => import('../components/book/BooksPage')),
 	},
 	{
 		path: '/books/:id',
 		component: lazy(() => import('../components/book/BookForm')),
 	},
 	{
-		path: '/users',
-		component: lazy(() => import('../components/user/UserTable')),
+		path: '/library',
+		component: lazy(() => import('../components/book/BookLibrary')),
+	},
+	{
+		path: '/cart',
+		component: lazy(() => import('../components/book/BooksCartPage')),
 	},
 ];
 

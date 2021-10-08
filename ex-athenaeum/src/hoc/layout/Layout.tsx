@@ -1,33 +1,28 @@
-import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
+import { Container, Box } from '@mui/material';
 import { Footer } from '../../components/footer/Footer';
 import { Header } from '../../components/header/Header';
 import PageTitle from '../../components/page-title/PageTitle';
 
 export const Layout = (props: any) => {
     return (
-        <div>
+        <Box sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            minHeight: '100vh',
+            backgroundColor: 'grey.50'
+        }}
+        >
             <Header />
 
-            <main>
+            <Box component="main" sx={{ flex: 1 }}>
                 <Container fixed sx={{ py: 4 }}>
                     <PageTitle />
 
-                    {/* sx={{
-                        bgcolor: 'grey.50',
-                        border: 1,
-                        borderColor: 'grey.400',
-                        borderRadius: 1,
-                        p: 3
-                    }} */}
-
-                    <Box >
-                        {props.children}
-                    </Box>
+                    {props.children}
                 </Container>
-            </main>
+            </Box>
 
             <Footer />
-        </div>
+        </Box>
     );
 }
