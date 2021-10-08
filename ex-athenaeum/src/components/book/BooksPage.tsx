@@ -6,7 +6,7 @@ import usePageTitle from "../../hooks/usePageTitle";
 import { useAppSelector } from "../../store/hooks";
 import { ActionButton } from "../action-button/ActionButton";
 import { Empty } from "../empty/Empty";
-import BookGrid from "./BookGrid";
+import BooksGrid from "./BooksGrid";
 import { selectBooks } from "../../store/book/selectors";
 
 const empty = <Empty title="Sorry" action={<Button component={RouterLink} to="/books/create">Add books</Button>}>You haven't added any books yet.<br />Hit 'ADD BOOKS' to get started!</Empty>;
@@ -20,7 +20,7 @@ const BooksPage = () => {
 
     return (
         <>
-            {loading ? <CircularProgress /> : books?.length > 0 ? <BookGrid books={books} /> : empty}
+            {loading ? <CircularProgress /> : books?.length > 0 ? <BooksGrid books={books} /> : empty}
 
             <ActionButton to="/books/create">
                 <AddIcon />

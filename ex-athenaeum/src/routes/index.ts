@@ -19,7 +19,7 @@ export const routes: AppRoute[] = [
 	},
 	{
 		path: '/library',
-		component: lazy(() => import('../components/book/BookLibrary')),
+		component: lazy(() => import('../components/book/BooksLibrary')),
 	},
 	{
 		path: '/cart',
